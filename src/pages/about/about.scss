@@ -1,0 +1,18 @@
+page-about{
+    .content-bg{
+        height: 100%;
+        overflow-y: scroll;
+    }
+}
+
+.app-content{
+    .scroll-content{
+        padding: 8px;
+    }
+    .content-bg{
+        background-color: color($colors , light);
+        p{
+            margin: 0 0 18px 0;
+        }
+    }
+}

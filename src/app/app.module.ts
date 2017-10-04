@@ -1,30 +1,36 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
-
+import { NgModule, ErrorHandler } from '@angular/core';
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { allPages } from '../pages/common/declerations';
+
+var APP_Pages = [];
+  for(let i in allPages){
+    APP_Pages.push(allPages[i]);
+  }
+
+  var config = {
+      backButtonText: '',
+      backButtonIcon: 'md-arrow-back',
+      modalEnter: 'modal-slide-in',
+      modalLeave: 'modal-slide-out',
+      tabsPlacement: 'bottom',
+      pageTransition: 'md',
+      mode:'md'
+    };
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    APP_Pages
   ],
   imports: [
-    BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,config)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    APP_Pages
   ],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
 export class AppModule {}

@@ -1,0 +1,16 @@
+page-myrent {
+    .fab-md{
+        color: white !important;
+        box-shadow: 0 9px 3px 0 rgba(0, 0, 0, 0.001), 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    ion-fab[bottom]{
+        bottom: -2px;
+    }
+    .app-list{
+        .item-md{
+            &:last-child{
+                padding-bottom: 10px !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar color="primary"></ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="Loginpage">
+      <div class="formContainer">
+
+          <form class="app-form" padding>
+            <ion-list>
+                <ion-item no-padding>
+                  <ion-icon name="md-mail" color="secondary" item-left></ion-icon>
+                  <ion-input type="text" placeholder="Email"></ion-input>
+                </ion-item>
+
+                <ion-item no-padding>
+                  <ion-icon name="md-lock" color="secondary" item-left></ion-icon>
+                  <ion-input type="password" placeholder="Password"></ion-input>
+                </ion-item>
+
+                <ion-item no-padding>
+                  <ion-icon name="md-person" color="secondary" item-left></ion-icon>
+                  <ion-input type="text" placeholder="First name"></ion-input>
+                </ion-item>
+
+                <ion-item no-padding>
+                  <ion-icon name="md-person" color="secondary" item-left></ion-icon>
+                  <ion-input type="text" placeholder="last name"></ion-input>
+                </ion-item>
+            </ion-list>
+            <button ion-button block color="secondary" [navPush]="home">Signup</button>
+          </form>
+
+      </div>
+      <div class="loginFooter">
+          <div class="option-sign" text-center>
+            <p>Sign in with</p>
+            <ion-grid no-padding>
+              <ion-row padding-bottom>
+                <ion-col width-33>
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </ion-col>
+                <ion-col width-33>
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </ion-col>
+                <ion-col width-33>
+                  <ion-icon name="logo-googleplus"></ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>  
+      </div>
+    </div>
+</ion-content>

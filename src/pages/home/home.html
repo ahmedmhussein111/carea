@@ -1,14 +1,40 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+
+<ion-header [ngClass]="{'expanded': expanded}">
+
+  <ion-navbar color="primary" hideBackButton="true">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-capitalize>home</ion-title>
+    <!--<ion-searchbar placeholder="City, State or ZIP">
+       
+    </ion-searchbar>-->
+      <ion-item color="none" no-padding>
+          <ion-select>
+              <!--<ion-option value="Min" [selected]="true">ﬂ· «·√ÕÌ«¡</ion-option>-->
+              <ion-option  *ngFor="let item of districts"  [selected]="item.Id==0" value={{item.Id}}>{{item.NameAr}}</ion-option>
+              <!--<ion-option value="2000">2000</ion-option>
+              <ion-option value="2500">2500</ion-option>
+              <ion-option value="3000">3000</ion-option>-->
+          </ion-select>
+      </ion-item>
   </ion-navbar>
+
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+<ion-content>
+  
+  <ion-fab top right edge>
+    <button (click)="presentModal()" ion-fab mini><ion-icon name="md-map" class="map-icon"></ion-icon></button>
+  </ion-fab>
+
+  <ion-card class="grid-list" *ngFor="let item of grid" [navPush]="list">
+    <img src="assets/img/{{item.Img}}"/>
+    <ion-item color="light" class="bold">
+      {{item.NameAr}}
+      <ion-icon name="{{item.Icon}}" item-right></ion-icon>
+    </ion-item>
+  </ion-card>
+
 </ion-content>

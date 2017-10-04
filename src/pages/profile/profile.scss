@@ -1,0 +1,64 @@
+page-profile {
+    .app-content{
+        .scroll-content{
+            padding: 20px 8px;
+        }
+    }
+// item classes
+//----------------------------
+    .item-md{
+        font-weight: 600;
+        &.item-block{
+            .item-inner{
+                padding: 0px;
+                border-bottom: 1px solid color($colors , graytext);
+            }
+        }
+    }
+    .item-input{
+        &:last-child{
+            border-bottom: none !important;
+        }
+        .label-md{
+            color: #757575 !important;
+            font-size: 1.5rem;
+            font-weight: normal;
+        }
+        input::-webkit-input-placeholder {
+            color: color($colors , dark);
+        }
+        input:-moz-placeholder {
+            color: color($colors , dark);
+        }
+        .text-input-md{
+            font-weight: normal;
+            font-size: 1.44rem;
+            color: color($colors , dark);
+        }
+    } 
+    .name-user{
+        .text-input-md{
+            margin-left: 0;
+        }
+        input::-webkit-input-placeholder {
+            font-weight: 500;
+            font-size: 1.7rem;
+        }
+        input:-moz-placeholder {
+            font-weight: 500;
+            font-size: 1.7rem;
+        }
+    }  
+}
+
+.profile-img{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    -o-object-fit: cover;
+    margin-top: -25px;
+}
+
+.text-input[disabled]{
+    opacity: 1;
+}

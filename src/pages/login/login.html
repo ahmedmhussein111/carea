@@ -1,0 +1,46 @@
+<ion-header [ngClass]="{'expanded': expanded}">
+  <ion-navbar color="primary"></ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ <div class="Loginpage">
+      <div class="formContainer">
+
+          <form class="app-form" padding>
+            <ion-list>
+                <ion-item no-padding>
+                  <ion-icon name="md-mail" color="secondary" item-left></ion-icon>
+                  <ion-input type="text" placeholder="Email / Username"></ion-input>
+                </ion-item>
+
+                <ion-item no-padding>
+                  <ion-icon name="md-lock" color="secondary" item-left></ion-icon>
+                  <ion-input type="password" placeholder="Password"></ion-input>
+                </ion-item>
+            </ion-list>
+            <button ion-button block color="secondary" [navPush]="home">Signin</button>
+            <h4 color="light" [navPush]="register" text-center>No account yet? Create one</h4>
+            <h4 color="light" text-center (click)="forgotPassword()">forgot password</h4>
+          </form>
+
+      </div>
+      <div class="loginFooter">
+          <div class="option-sign" text-center>
+            <p>Sign in with</p>
+            <ion-grid no-padding>
+              <ion-row padding-bottom>
+                <ion-col width-33>
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </ion-col>
+                <ion-col width-33>
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </ion-col>
+                <ion-col width-33>
+                  <ion-icon name="logo-googleplus"></ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>  
+      </div>
+    </div>
+</ion-content>

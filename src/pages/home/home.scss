@@ -1,3 +1,38 @@
 page-home {
+    [menuToggle]{
+        display: inline-block !important;
+    }
+}
 
+.grid-list{
+    width: 50%;
+    float: left;
+    padding: 6px;
+    padding-bottom: 0;
+    &:nth-child(2n+1){
+        padding-right: 3px;
+    }
+    &:nth-child(2n){
+        padding-left: 3px;
+    }
+    &:last-child , &:nth-last-child(2){
+        padding-bottom: 6px;
+    }
+    img{
+        height: 151px;
+        object-fit: cover;
+        -o-object-fit: cover;
+        opacity: .7;
+    }
+    .item-md{
+        padding-left: 10px;
+        .item-inner{
+            padding-right: 0;
+        }
+    }
+    .label-md{
+        text-transform: capitalize;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
 }
